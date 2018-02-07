@@ -1,5 +1,14 @@
 # Azure Storage Client Library for C++ (3.1.0)
 
+This is a helium data commons fork of the Microsoft azure storage library.  The only current change is in the CMakeLists.txt file in the Microsoft.WindowsAzure.Storage directory.  We've added a stanza that allows you to
+build this library using the iRODS cmake, boost and clang environment so that you can build an irods 
+compatabile azure plugin. An example invocation of cmake would be
+
+- CASABLANCA_DIR=/data-commons /opt/irods-externals/cmake3.5.2-0/bin/cmake .. -DCMAKE_COMPILE_FOR_IRODS:BOOL=on -DBOOST_ROOT:STRING=/opt/irods-externals/boost1.60.0-0/
+
+where CASABLANCA dir is where you have built version 2.9.1 of the microsoft cpprest library.
+
+
 The Azure Storage Client Library for C++ allows you to build applications against Microsoft Azure Storage. For an overview of Azure Storage, see [Introduction to Microsoft Azure Storage](http://azure.microsoft.com/en-us/documentation/articles/storage-introduction/).
 
 # Features
